@@ -1,0 +1,52 @@
+               from ECOM project
+
+            1) Command for testing 
+            2) flake8 (to comply with PEP8 guideline)
+            3) flake8-isort (to comply import guideline)
+
+Note: >> means anthing after is in command line. 
+--------------------------------------------------------------------------------
+1) Command for testing 
+
+>> python manage.py test
+
+Install coverage library for testing which is helful for testing. 
+
+>> pip install coverage
+
+>> coverage run manage.py test
+
+>> coverage report
+
+#to omit any file don't want to test
+>> coverage run --omit='*/myenv/*' manage.py test
+
+# to see the report in html page. Then go C:/user/..../htmlcov
+>> coverage html
+
+---------------------------------------------------------------------------------------
+2) flake8 (to comply with PEP8 guidlines for coding convention)
+
+>> pip install flake8
+
+>>flake8
+It will give list of all the recommendation. 
+
+To exclude files that you don't want to run flake8,
+Make a file name setup.cfg
+Then, on setup.cfg, write the following code: 
+[flake8]
+exclude = .git,*migrations*,*venv*
+max-line-length = 119
+
+>>flake8
+Now it will give short version. 
+--------------------------------------------------------------------------------
+3) flake8-isort to automatically follow PEP8 import guideline
+
+>> pip install flake8-isort
+
+>> isort . 
+. to run on the same folder. 
+
+---------------------------------------------------------------------------------
